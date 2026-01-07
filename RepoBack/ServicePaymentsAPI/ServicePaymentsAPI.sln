@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicePaymentsAPI", "ServicePaymentsAPI\ServicePaymentsAPI.csproj", "{CF877DC8-818D-41D6-A77F-B664C064C458}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PAY.CROSS.DATAACCESS", "PAY.CROSS.DATAACCESS", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PAY.SERVICE.API", "PAY.SERVICE.API", "{8C9F566A-E5C2-41EC-9DDA-6540FCFDB00B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PAY.CROSS.LOGGER", "PAY.CROSS.LOGGER", "{C87F3F62-0F7D-45D3-9EA3-6583094D49FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PAY.SERVICE.ENTITIE", "PAY.SERVICE.ENTITIE", "{C4FB5B37-8D58-4445-BD5A-8B580646D179}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF877DC8-818D-41D6-A77F-B664C064C458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF877DC8-818D-41D6-A77F-B664C064C458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF877DC8-818D-41D6-A77F-B664C064C458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF877DC8-818D-41D6-A77F-B664C064C458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF877DC8-818D-41D6-A77F-B664C064C458} = {8C9F566A-E5C2-41EC-9DDA-6540FCFDB00B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A20391F-1266-4B76-BF8A-50C1C4C6E27A}
+	EndGlobalSection
+EndGlobal
