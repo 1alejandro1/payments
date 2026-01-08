@@ -28,7 +28,7 @@ namespace ServicePaymentsAPI
                 ProviderId = request.ProviderId,
                 Amount = request.Amount,
                 CurrencyType = request.Currency,
-                Status = request.Status,
+                Status = "pendiente",
                 UserRegistration = request.UserRegistration
             };
 

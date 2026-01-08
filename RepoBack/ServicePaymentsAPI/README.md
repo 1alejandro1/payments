@@ -1,5 +1,6 @@
 To improve the README.md file for the project, we will incorporate the new content while ensuring that the overall structure and coherence of the document are maintained. Below is the revised README.md file with the new content integrated seamlessly.
-
+
+
 # payments Service by Douglas Toro
 
 ## Descripción
@@ -71,6 +72,7 @@ Si deseas contribuir al proyecto, por favor revisa el archivo `CONTRIBUTING.md` 
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-
+
+
 
 In this revised README.md, the new content has been integrated into the appropriate sections, ensuring clarity and coherence throughout the document. The structure remains intact, and additional sections such as "Contribuciones" and "Licencia" have been added to provide a comprehensive overview of the project.

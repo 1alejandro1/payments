@@ -12,9 +12,6 @@ namespace ServicePaymentsAPI.DTOs.Requests
         [RegularExpression("^BOL$", ErrorMessage = "Solo se permite la moneda Bolivianos (BOL)")]
         public string Currency { get; set; } = string.Empty;
         [Required]
-        [StringLength(20)]
-        public string Status { get; set; } = string.Empty;
-        [Required]
         [StringLength(10)]
         public string UserRegistration { get; set; } = string.Empty;
         [Required]
