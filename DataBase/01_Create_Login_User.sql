@@ -1,0 +1,27 @@
+USE [master]
+GO
+
+--Creación Login
+
+CREATE LOGIN [UsrBD_payments] WITH PASSWORD=N'UsrBDPayments1234', DEFAULT_DATABASE=[DB_SERVICE_PAYMENT], DEFAULT_LANGUAGE=[us_english], CHECK_EXPIRATION=OFF, CHECK_POLICY=ON
+GO
+
+ALTER SERVER ROLE [securityadmin] ADD MEMBER [UsrBD_payments]
+GO
+
+ALTER SERVER ROLE [serveradmin] ADD MEMBER [UsrBD_payments]
+GO
+
+ALTER SERVER ROLE [diskadmin] ADD MEMBER [UsrBD_payments]
+GO
+
+ALTER SERVER ROLE [bulkadmin] ADD MEMBER [UsrBD_payments]
+GO
+
+--Creación de Usuario
+
+USE [DB_SERVICE_PAYMENT]
+GO
+
+CREATE USER [UsrBD_payments] FOR LOGIN [UsrBD_payments] WITH DEFAULT_SCHEMA=[dbo]
+GO
