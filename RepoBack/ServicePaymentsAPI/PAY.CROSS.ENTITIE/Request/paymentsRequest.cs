@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace PAY.CROSS.ENTITIE.Request
 {
-    public class paymentRequest
+    public class paymentsRequest
     {
         [Required]
         public Guid CustomerId { get; set; }
@@ -26,11 +21,10 @@ namespace PAY.CROSS.ENTITIE.Request
 
         [Required]
         [StringLength(20)]
-        public string Status { get; set; }
+        public string? Status { get; set; }
 
         [Required]
         [StringLength(10)]
         public string? UserRegistration { get; set; }
-
     }
 }

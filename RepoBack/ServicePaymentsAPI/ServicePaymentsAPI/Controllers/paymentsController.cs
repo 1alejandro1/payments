@@ -1,19 +1,33 @@
-﻿using Microsoft.AspNetCore.Cors.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using ServicePaymentsAPI.DTOs;
+using ServicePaymentsAPI.DTOs.Requests;
+using ServicePaymentsAPI.DTOs.Responses;
 
 namespace ServicePaymentsAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class paymentsController : ControllerBase
+    public class PaymentsController : ControllerBase
     {
-        public paymentsController(IScoreService ScoreService)
+        private readonly IPaymentService _paymentService;
+
+        public PaymentsController(IPaymentService paymentService)
         {
-            this.ScoreService = ScoreService;
+            _paymentService = paymentService;
         }
-        public IActionResult Index()
+
+        [HttpPost("register")]
+        public async Task<ActionResult<PaymentResponseDto>> Register([FromBody] PaymentRequestDto request)
         {
-            return View();
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var response = await _paymentService.RegisterPaymentAsync(request);
+
+            if (!response.Success)
+                return StatusCode(500, response);
+
+            return Ok(response);
         }
     }
 }
