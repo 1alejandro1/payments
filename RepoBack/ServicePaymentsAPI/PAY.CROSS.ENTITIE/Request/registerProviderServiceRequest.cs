@@ -2,7 +2,7 @@
 
 namespace PAY.CROSS.ENTITIE.Request
 {
-    public class providerServiceRequest
+    public class registerProviderServiceRequest
     {
         [Required]
         [StringLength(50)]
@@ -12,6 +12,7 @@ namespace PAY.CROSS.ENTITIE.Request
         public string? Address { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "El NIT debe ser mayor que 0")]
         public int Nit { get; set; }
 
         public int? CellPhone { get; set; }
@@ -27,19 +28,6 @@ namespace PAY.CROSS.ENTITIE.Request
         [Required]
         [StringLength(10)]
         public string? UserRegistration { get; set; }
-
-        [Required]
-        public DateTime DateRegistration { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string? UserModification { get; set; }
-
-        [Required]
-        public DateTime DateModification { get; set; }
-
-        [Required]
-        public bool State { get; set; }
 
     }
 }

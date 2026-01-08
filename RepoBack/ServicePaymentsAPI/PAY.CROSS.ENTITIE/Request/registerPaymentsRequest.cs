@@ -2,7 +2,7 @@
 
 namespace PAY.CROSS.ENTITIE.Request
 {
-    public class paymentsRequest
+    public class registerPaymentsRequest
     {
         [Required]
         public Guid CustomerId { get; set; }

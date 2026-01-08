@@ -2,7 +2,7 @@
 
 namespace PAY.CROSS.ENTITIE.Request
 {
-    public class customerRequest
+    public class registerCustomerRequest
     {
         [Required]
         [StringLength(60)]
@@ -16,13 +16,14 @@ namespace PAY.CROSS.ENTITIE.Request
         public int IdentificationNumber { get; set; }
 
         [Required]
-        [StringLength(2)]
+        [StringLength(2, MinimumLength = 2)]
         public string? IdentificationExtension { get; set; }
 
         [Required]
-        [StringLength(2)]
+        [StringLength(2, MinimumLength = 2)]
         public string? IdentificationComplement { get; set; }
 
+        [DataType(DataType.Date)]
         public DateTime? BirthDate { get; set; }
 
         public int? CellPhone { get; set; }
@@ -34,18 +35,5 @@ namespace PAY.CROSS.ENTITIE.Request
         [Required]
         [StringLength(10)]
         public string? UserRegistration { get; set; }
-
-        [Required]
-        public DateTime DateRegistration { get; set; }
-
-        [Required]
-        [StringLength(10)]
-        public string? UserModification { get; set; }
-
-        [Required]
-        public DateTime DateModification { get; set; }
-
-        [Required]
-        public bool State { get; set; }
     }
 }

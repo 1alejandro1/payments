@@ -2,7 +2,7 @@
 
 namespace ServicePaymentsAPI.DTOs.Requests
 {
-    public class PaymentRequestDto
+    public class RegisterPaymentRequestDto
     {
         [Required]
         [Range(0.01, 1500, ErrorMessage = "El monto debe ser mayor a 0 y no superar 1500")]
